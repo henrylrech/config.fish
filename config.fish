@@ -1,8 +1,8 @@
 if status is-interactive
-
 end
-function ssha
-    ssh-add ~/.ssh/id_rsa
+
+function ssh-github
+    ssh-add ~/.ssh/id_ed25519
 end
 
 set -g theme_display_rw no
@@ -19,7 +19,6 @@ set PATH $GOPATH/bin $PATH
 
 function fish_greeting
     if status --is-interactive
-        # Check if the terminal is kitty
         if test "$TERM" = xterm-kitty
             krabby random 1-5 --no-gmax --no-regional
         end
